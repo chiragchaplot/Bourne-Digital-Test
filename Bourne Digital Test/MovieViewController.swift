@@ -14,10 +14,16 @@ class MovieViewController: UIViewController {
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var releaseDate: UILabel!
     
+    var movie:Movie?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+//        // Do any additional setup after loading the view.
+//        movieName.text = movie?.title
+//        rating.text = String(describing: movie?.rating)
+//        releaseDate.text = movie?.releaseDate
+        
     }
     
 

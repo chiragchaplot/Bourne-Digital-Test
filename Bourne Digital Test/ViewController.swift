@@ -26,6 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         //Fill up the tables
                         self.tableView.delegate = self
                         self.tableView.dataSource = self
+                        self.tableView.reloadData()
                     case .failure(let error):
                         print(error)
                     }
@@ -33,9 +34,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
             
         // Do any additional setup after loading the view.
-        self.tableView.reloadData()
-        
-        
         
     }
     
@@ -91,5 +89,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = mainObject.movies[indexPath.row].title.capitalized
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "showDetails", sender: self)
+//    }
+//    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? MovieViewController{
+//            destination.movie = mainObject.movies[tableView.indexPathForSelectedRow!.row]
+//        }
+//    }
 }
 

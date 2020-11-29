@@ -47,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05283E612573E3A90037E939 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				058AB3B12573787200C74D6E /* Main.storyboard */,
+				058AB3B62573787200C74D6E /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		058AB39F2573787200C74D6E = {
 			isa = PBXGroup;
 			children = (
@@ -66,15 +75,14 @@
 		058AB3AA2573787200C74D6E /* Bourne Digital Test */ = {
 			isa = PBXGroup;
 			children = (
+				05283E612573E3A90037E939 /* Views */,
 				058AB3CE25738ADF00C74D6E /* Model */,
 				058AB3AB2573787200C74D6E /* AppDelegate.swift */,
 				058AB3AD2573787200C74D6E /* SceneDelegate.swift */,
 				058AB3AF2573787200C74D6E /* ViewController.swift */,
-				058AB3B12573787200C74D6E /* Main.storyboard */,
-				058AB3B42573787200C74D6E /* Assets.xcassets */,
-				058AB3B62573787200C74D6E /* LaunchScreen.storyboard */,
-				058AB3B92573787200C74D6E /* Info.plist */,
 				05283E5D2573CE090037E939 /* MovieViewController.swift */,
+				058AB3B42573787200C74D6E /* Assets.xcassets */,
+				058AB3B92573787200C74D6E /* Info.plist */,
 			);
 			path = "Bourne Digital Test";
 			sourceTree = "<group>";
