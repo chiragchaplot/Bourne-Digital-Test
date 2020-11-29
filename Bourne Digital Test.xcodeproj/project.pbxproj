@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05283E5E2573CE090037E939 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05283E5D2573CE090037E939 /* MovieViewController.swift */; };
 		058AB3AC2573787200C74D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AB3AB2573787200C74D6E /* AppDelegate.swift */; };
 		058AB3AE2573787200C74D6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AB3AD2573787200C74D6E /* SceneDelegate.swift */; };
 		058AB3B02573787200C74D6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AB3AF2573787200C74D6E /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05283E5D2573CE090037E939 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		058AB3A82573787200C74D6E /* Bourne Digital Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bourne Digital Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		058AB3AB2573787200C74D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		058AB3AD2573787200C74D6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				058AB3B42573787200C74D6E /* Assets.xcassets */,
 				058AB3B62573787200C74D6E /* LaunchScreen.storyboard */,
 				058AB3B92573787200C74D6E /* Info.plist */,
+				05283E5D2573CE090037E939 /* MovieViewController.swift */,
 			);
 			path = "Bourne Digital Test";
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				058AB3B02573787200C74D6E /* ViewController.swift in Sources */,
+				05283E5E2573CE090037E939 /* MovieViewController.swift in Sources */,
 				058AB3AC2573787200C74D6E /* AppDelegate.swift in Sources */,
 				058AB3AE2573787200C74D6E /* SceneDelegate.swift in Sources */,
 				058AB3D025738B0100C74D6E /* MovieObject.swift in Sources */,

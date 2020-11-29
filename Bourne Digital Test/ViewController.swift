@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,33 +27,6 @@ class ViewController: UIViewController {
                 }
         // Do any additional setup after loading the view.
     }
-
-//    //method to fetch the date
-//
-//    func fetchPostData(completionHandler: @escaping ([movieObject]) -> Void)
-//    {
-//        let url = URL(string: "https://www.dropbox.com/s/q1ins5dsldsojzt/movies.json?dl=1")!
-//
-//        //Create a task to fetch data
-//        let task = URLSession.shared.dataTask(with: url) { (data_received, response, error) in
-//
-//            //Creating a variable data only if there id data_received
-//            guard let data = data_received else { return }
-//
-//            //do catch for data processing
-//            do{
-//                let postsData = try JSONDecoder().decode([movieObject].self, from: data)
-//
-//                completionHandler(postsData)
-//
-//            }
-//
-//            catch{
-//                let error = error
-//                print ("fetchPostData:- " + error.localizedDescription)
-//            }
-//        }.resume()
-//    }
     
     private func readLocalFile(forName name: String) -> Data? {
             do {
