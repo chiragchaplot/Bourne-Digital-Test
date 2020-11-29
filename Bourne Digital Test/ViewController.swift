@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var mainObject: MainObject!
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,27 +23,24 @@ class ViewController: UIViewController {
                     switch result {
                     case .success(let data):
                         self.parse(jsonData: data)
+                        //Fill up the tables
+                        self.tableView.delegate = self
+                        self.tableView.dataSource = self
                     case .failure(let error):
                         print(error)
                     }
                 }
+        
+            
         // Do any additional setup after loading the view.
+        self.tableView.reloadData()
+        
+        
+        
     }
     
-    private func readLocalFile(forName name: String) -> Data? {
-            do {
-                if let bundlePath = Bundle.main.path(forResource: name,
-                                                     ofType: "json"),
-                    let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
-                    return jsonData
-                }
-            } catch {
-                print(error)
-            }
+    
             
-            return nil
-        }
-        
         private func loadJson(fromURLString urlString: String,
                               completion: @escaping (Result<Data, Error>) -> Void) {
             if let url = URL(string: urlString) {
@@ -61,22 +60,36 @@ class ViewController: UIViewController {
 
         private func parse(jsonData: Data) {
             do {
-                let mainObject = try JSONDecoder().decode(MainObject.self, from: jsonData)
+                self.mainObject = try JSONDecoder().decode(MainObject.self, from: jsonData)
                 
-                print("Title: ", mainObject.title)
+                print("Title: ", self.mainObject.title)
                 
-                for movie in mainObject.movies
+                for movie in self.mainObject.movies
                 {
                     print("Title:", movie.title)
                     print("IMDB Rating", movie.rating)
                     print("Image Href", movie.imageHref)
                     print("Release Date",movie.releaseDate)
+                    print("===================================")
                 }
                 
-                print("===================================")
+                self.tableView.reloadData()
+                
+                
             } catch {
-                print("decode error:- " + error.localizedDescription)
+                print("parse:- " + error.localizedDescription)
             }
         }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return mainObject.movies.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        cell.textLabel?.text = mainObject.movies[indexPath.row].title.capitalized
+        return cell
+    }
 }
 
