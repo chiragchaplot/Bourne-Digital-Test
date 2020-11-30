@@ -85,10 +85,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return mainObject.movies.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-//        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-//        cell.textLabel?.text = mainObject.movies[indexPath.row].title.capitalized
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomTableViewCell
         
         cell.movieLabel.text = mainObject.movies[indexPath.row].title.capitalized
@@ -96,6 +98,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.movieImage.sd_setImage(with: URL(string: cell.movieImageURL ?? ""),
                                       placeholderImage: UIImage(named: "placeholder.png"
                                      ))
+        
+        cell.cellView.layer.cornerRadius = cell.cellView.frame.height/2
+        cell.movieImage.layer.cornerRadius = cell.movieImage.frame.height/2
         return cell
     }
     
