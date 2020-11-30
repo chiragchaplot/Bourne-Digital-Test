@@ -9,15 +9,15 @@ import Foundation
 
 
 struct MainObject: Codable {
-    let title: String
-    let movies: [Movie]
+    var title: String
+    var movies: [Movie]
 }
 
 struct Movie: Codable {
-    let title: String!
-    let imageHref: String!
-    let rating: Double!
-    let releaseDate: String!
+    var title: String!
+    var imageHref: String!
+    var rating: Double!
+    var releaseDate: String!
 }
 
 

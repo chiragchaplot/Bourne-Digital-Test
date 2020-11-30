@@ -76,10 +76,9 @@
                     <navigationItem key="navigationItem" id="kN9-PE-pQ7"/>
                     <connections>
                         <outlet property="imageView" destination="rE7-tu-BqX" id="WFw-Fz-wz0"/>
-                        <outlet property="rating" destination="Q1T-Bn-cqx" id="Uob-uC-3PS"/>
-                        <outlet property="releaseDate" destination="Jlz-I8-tcp" id="LTh-Ob-1Gx"/>
-                        <outlet property="releasedate" destination="Jlz-I8-tcp" id="IPO-xd-KS2"/>
-                        <outlet property="title" destination="Lgg-B3-Y28" id="2d4-8J-y1j"/>
+                        <outlet property="movieName" destination="Lgg-B3-Y28" id="SY8-vq-hgR"/>
+                        <outlet property="movieRating" destination="Q1T-Bn-cqx" id="2vQ-YC-C7X"/>
+                        <outlet property="movieReleaseDate" destination="Jlz-I8-tcp" id="AFQ-MV-DOV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sw5-dh-AfU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

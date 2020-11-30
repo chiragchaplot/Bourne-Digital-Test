@@ -11,18 +11,18 @@ class MovieViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var movieName: UILabel!
-    @IBOutlet weak var rating: UILabel!
-    @IBOutlet weak var releaseDate: UILabel!
+    @IBOutlet weak var movieRating: UILabel!
+    @IBOutlet weak var movieReleaseDate: UILabel!
     
     var movie:Movie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        // Do any additional setup after loading the view.
-//        movieName.text = movie?.title
-//        rating.text = String(describing: movie?.rating)
-//        releaseDate.text = movie?.releaseDate
+        // Do any additional setup after loading the view.
+        movieName.text = movie?.title
+        movieRating.text = String(describing: movie?.rating)
+        movieReleaseDate.text = movie?.releaseDate
         
     }
     

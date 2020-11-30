@@ -8,15 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		05283E5E2573CE090037E939 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05283E5D2573CE090037E939 /* MovieViewController.swift */; };
+		05308F7B25753AAD004B0E0A /* PullToRefreshKit in Frameworks */ = {isa = PBXBuildFile; productRef = 05308F7A25753AAD004B0E0A /* PullToRefreshKit */; };
 		058AB3AC2573787200C74D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AB3AB2573787200C74D6E /* AppDelegate.swift */; };
 		058AB3AE2573787200C74D6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AB3AD2573787200C74D6E /* SceneDelegate.swift */; };
 		058AB3B02573787200C74D6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AB3AF2573787200C74D6E /* ViewController.swift */; };
 		058AB3B32573787200C74D6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058AB3B12573787200C74D6E /* Main.storyboard */; };
 		058AB3B52573787200C74D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058AB3B42573787200C74D6E /* Assets.xcassets */; };
 		058AB3B82573787200C74D6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058AB3B62573787200C74D6E /* LaunchScreen.storyboard */; };
-		058AB3C325737E2B00C74D6E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 058AB3C225737E2B00C74D6E /* SwiftyJSON */; };
-		058AB3C725737E7F00C74D6E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 058AB3C625737E7F00C74D6E /* Alamofire */; };
-		058AB3CB25737EE500C74D6E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 058AB3CA25737EE500C74D6E /* SDWebImageSwiftUI */; };
 		058AB3D025738B0100C74D6E /* MovieObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AB3CF25738B0100C74D6E /* MovieObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,9 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058AB3CB25737EE500C74D6E /* SDWebImageSwiftUI in Frameworks */,
-				058AB3C325737E2B00C74D6E /* SwiftyJSON in Frameworks */,
-				058AB3C725737E7F00C74D6E /* Alamofire in Frameworks */,
+				05308F7B25753AAD004B0E0A /* PullToRefreshKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,9 +108,7 @@
 			);
 			name = "Bourne Digital Test";
 			packageProductDependencies = (
-				058AB3C225737E2B00C74D6E /* SwiftyJSON */,
-				058AB3C625737E7F00C74D6E /* Alamofire */,
-				058AB3CA25737EE500C74D6E /* SDWebImageSwiftUI */,
+				05308F7A25753AAD004B0E0A /* PullToRefreshKit */,
 			);
 			productName = "Bourne Digital Test";
 			productReference = 058AB3A82573787200C74D6E /* Bourne Digital Test.app */;
@@ -147,6 +141,7 @@
 				058AB3C125737E2B00C74D6E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				058AB3C525737E7F00C74D6E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				058AB3C925737EE500C74D6E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				05308F7925753AAD004B0E0A /* XCRemoteSwiftPackageReference "PullToRefreshKit" */,
 			);
 			productRefGroup = 058AB3A92573787200C74D6E /* Products */;
 			projectDirPath = "";
@@ -383,6 +378,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		05308F7925753AAD004B0E0A /* XCRemoteSwiftPackageReference "PullToRefreshKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LeoMobileDeveloper/PullToRefreshKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.9;
+			};
+		};
 		058AB3C125737E2B00C74D6E /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
@@ -410,20 +413,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		058AB3C225737E2B00C74D6E /* SwiftyJSON */ = {
+		05308F7A25753AAD004B0E0A /* PullToRefreshKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 058AB3C125737E2B00C74D6E /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
-		};
-		058AB3C625737E7F00C74D6E /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 058AB3C525737E7F00C74D6E /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		058AB3CA25737EE500C74D6E /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 058AB3C925737EE500C74D6E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
+			package = 05308F7925753AAD004B0E0A /* XCRemoteSwiftPackageReference "PullToRefreshKit" */;
+			productName = PullToRefreshKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
