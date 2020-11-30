@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var mainObject: MainObject!
+    var movieList : [movieCell] = []
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -26,7 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         //Fill up the tables
                         self.tableView.delegate = self
                         self.tableView.dataSource = self
-                        self.tableView.reloadData()
+                        //self.tableView.reloadData()
                     case .failure(let error):
                         print(error)
                     }
@@ -85,8 +87,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = mainObject.movies[indexPath.row].title.capitalized
+//        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+//        cell.textLabel?.text = mainObject.movies[indexPath.row].title.capitalized
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomTableViewCell
+        
+        cell.movieLabel.text = mainObject.movies[indexPath.row].title.capitalized
+        cell.movieImageURL = mainObject.movies[indexPath.row].imageHref
+        cell.movieImage.sd_setImage(with: URL(string: cell.movieImageURL ?? ""),
+                                      placeholderImage: UIImage(named: "placeholder.png"
+                                     ))
         return cell
     }
     
