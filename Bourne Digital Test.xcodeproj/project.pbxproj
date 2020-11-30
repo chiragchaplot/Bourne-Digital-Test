@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		05283E5E2573CE090037E939 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05283E5D2573CE090037E939 /* MovieViewController.swift */; };
 		05308F7B25753AAD004B0E0A /* PullToRefreshKit in Frameworks */ = {isa = PBXBuildFile; productRef = 05308F7A25753AAD004B0E0A /* PullToRefreshKit */; };
+		05308F7F2575422C004B0E0A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 05308F7E2575422C004B0E0A /* SDWebImage */; };
+		05308F812575422C004B0E0A /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 05308F802575422C004B0E0A /* SDWebImageMapKit */; };
+		05308F84257543B5004B0E0A /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 05308F83257543B5004B0E0A /* placeholder.png */; };
 		058AB3AC2573787200C74D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AB3AB2573787200C74D6E /* AppDelegate.swift */; };
 		058AB3AE2573787200C74D6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AB3AD2573787200C74D6E /* SceneDelegate.swift */; };
 		058AB3B02573787200C74D6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058AB3AF2573787200C74D6E /* ViewController.swift */; };
@@ -20,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		05283E5D2573CE090037E939 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		05308F83257543B5004B0E0A /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		058AB3A82573787200C74D6E /* Bourne Digital Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bourne Digital Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		058AB3AB2573787200C74D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		058AB3AD2573787200C74D6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05308F7F2575422C004B0E0A /* SDWebImage in Frameworks */,
+				05308F812575422C004B0E0A /* SDWebImageMapKit in Frameworks */,
 				05308F7B25753AAD004B0E0A /* PullToRefreshKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				058AB3B12573787200C74D6E /* Main.storyboard */,
+				05308F83257543B5004B0E0A /* placeholder.png */,
 				058AB3B62573787200C74D6E /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -109,6 +116,8 @@
 			name = "Bourne Digital Test";
 			packageProductDependencies = (
 				05308F7A25753AAD004B0E0A /* PullToRefreshKit */,
+				05308F7E2575422C004B0E0A /* SDWebImage */,
+				05308F802575422C004B0E0A /* SDWebImageMapKit */,
 			);
 			productName = "Bourne Digital Test";
 			productReference = 058AB3A82573787200C74D6E /* Bourne Digital Test.app */;
@@ -142,6 +151,7 @@
 				058AB3C525737E7F00C74D6E /* XCRemoteSwiftPackageReference "Alamofire" */,
 				058AB3C925737EE500C74D6E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				05308F7925753AAD004B0E0A /* XCRemoteSwiftPackageReference "PullToRefreshKit" */,
+				05308F7D2575422C004B0E0A /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 058AB3A92573787200C74D6E /* Products */;
 			projectDirPath = "";
@@ -158,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				058AB3B82573787200C74D6E /* LaunchScreen.storyboard in Resources */,
+				05308F84257543B5004B0E0A /* placeholder.png in Resources */,
 				058AB3B52573787200C74D6E /* Assets.xcassets in Resources */,
 				058AB3B32573787200C74D6E /* Main.storyboard in Resources */,
 			);
@@ -386,6 +397,14 @@
 				minimumVersion = 0.8.9;
 			};
 		};
+		05308F7D2575422C004B0E0A /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.0;
+			};
+		};
 		058AB3C125737E2B00C74D6E /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
@@ -417,6 +436,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 05308F7925753AAD004B0E0A /* XCRemoteSwiftPackageReference "PullToRefreshKit" */;
 			productName = PullToRefreshKit;
+		};
+		05308F7E2575422C004B0E0A /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05308F7D2575422C004B0E0A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		05308F802575422C004B0E0A /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05308F7D2575422C004B0E0A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
