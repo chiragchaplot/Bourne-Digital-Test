@@ -10,36 +10,41 @@ import SDWebImage
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    
+    
     var mainObject: MainObject!
     var movieList : [movieCell] = []
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBAction func refreshButtonClicked(_ sender: Any) {
+        startLoading()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
                 
-                let urlString = "https://www.dropbox.com/s/q1ins5dsldsojzt/movies.json?dl=1"
-        
-                self.loadJson(fromURLString: urlString) { (result) in
-                    switch result {
-                    case .success(let data):
-                        self.parse(jsonData: data)
-                        //Fill up the tables
-                        self.tableView.delegate = self
-                        self.tableView.dataSource = self
-                        //self.tableView.reloadData()
-                    case .failure(let error):
-                        print(error)
-                    }
-                }
-        
-            
+        startLoading();
         // Do any additional setup after loading the view.
         
     }
     
-    
+    private func startLoading()
+    {
+        let urlString = "https://www.dropbox.com/s/q1ins5dsldsojzt/movies.json?dl=1"
+        
+        self.loadJson(fromURLString: urlString) { (result) in
+            switch result {
+            case .success(let data):
+                self.parse(jsonData: data)
+                //Fill up the tables
+                self.tableView.delegate = self
+                self.tableView.dataSource = self
+                //self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
             
         private func loadJson(fromURLString urlString: String,
                               completion: @escaping (Result<Data, Error>) -> Void) {

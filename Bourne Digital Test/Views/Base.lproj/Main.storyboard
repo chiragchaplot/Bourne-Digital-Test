@@ -81,7 +81,13 @@
                             <constraint firstAttribute="bottomMargin" secondItem="1i8-ZB-m5M" secondAttribute="bottom" id="TbI-a6-ZTu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iTI-oh-w9O"/>
+                    <navigationItem key="navigationItem" id="iTI-oh-w9O">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="UbS-qN-A1x">
+                            <connections>
+                                <action selector="refreshButtonClicked:" destination="BYZ-38-t0r" id="uQS-5J-vRq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="1i8-ZB-m5M" id="Def-Xn-QTR"/>
                         <segue destination="ptT-6z-Xuc" kind="show" identifier="showDetails" id="7rx-uf-Hme"/>
