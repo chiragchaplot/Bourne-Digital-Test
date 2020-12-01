@@ -20,8 +20,18 @@ class MovieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        movieName.text = movie?.title
+        
+        //Movie Name Error Handling
+        if (movie!.title == nil)
+        {
+            movieName.text = "Movie Name Not Found"
+            movieName.textColor = UIColor.red
+        }
+        else
+        {
+            movieName.text = movie?.title
+        }
+        
         
         //Movie Rating Error Handling
         if (movie!.rating == nil)
