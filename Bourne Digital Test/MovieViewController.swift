@@ -31,7 +31,7 @@ class MovieViewController: UIViewController {
         }
         else
         {
-            movieRating.text = String(describing: movie!.rating!)
+            movieRating.text = "iMDB Rating: " + String(describing: movie!.rating!)
         }
         
         //Movie Release Date Error Handling
