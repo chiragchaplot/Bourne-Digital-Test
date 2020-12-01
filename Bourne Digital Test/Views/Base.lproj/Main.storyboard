@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sd4-0y-1sa">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -13,6 +13,74 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bourne_Digital_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1i8-ZB-m5M">
+                                <rect key="frame" x="44" y="32" width="724" height="322"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="100" id="0rx-4T-3vO" customClass="CustomTableViewCell" customModule="Bourne_Digital_Test" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="724" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0rx-4T-3vO" id="Vo0-UW-59x">
+                                            <rect key="frame" x="0.0" y="0.0" width="724" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTX-XS-GH1">
+                                                    <rect key="frame" x="10" y="5" width="704" height="90"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bourne digital" translatesAutoresizingMaskIntoConstraints="NO" id="wzW-7c-4s9">
+                                                            <rect key="frame" x="0.0" y="5" width="80" height="80"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="80" id="43v-8C-F6w"/>
+                                                                <constraint firstAttribute="height" constant="80" id="uyy-0F-jEl"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rec-KO-oip">
+                                                            <rect key="frame" x="88" y="8" width="608" height="74"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.53058112157534243" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="rec-KO-oip" secondAttribute="bottom" constant="8" id="2Kx-bp-uez"/>
+                                                        <constraint firstAttribute="trailing" secondItem="rec-KO-oip" secondAttribute="trailing" constant="8" id="4mX-Bn-9hQ"/>
+                                                        <constraint firstItem="rec-KO-oip" firstAttribute="leading" secondItem="wzW-7c-4s9" secondAttribute="trailing" constant="8" id="LUo-t7-SaY"/>
+                                                        <constraint firstItem="rec-KO-oip" firstAttribute="top" secondItem="OTX-XS-GH1" secondAttribute="top" constant="8" id="ReI-iF-FYV"/>
+                                                        <constraint firstItem="wzW-7c-4s9" firstAttribute="leading" secondItem="OTX-XS-GH1" secondAttribute="leading" id="a6v-x5-Ile"/>
+                                                        <constraint firstItem="wzW-7c-4s9" firstAttribute="centerY" secondItem="OTX-XS-GH1" secondAttribute="centerY" id="eTc-7g-Xac"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="OTX-XS-GH1" secondAttribute="trailing" constant="10" id="16b-hq-Y7q"/>
+                                                <constraint firstAttribute="bottom" secondItem="OTX-XS-GH1" secondAttribute="bottom" constant="5" id="7Q9-eo-NOX"/>
+                                                <constraint firstItem="OTX-XS-GH1" firstAttribute="leading" secondItem="Vo0-UW-59x" secondAttribute="leading" constant="10" id="Dzt-Hc-Hh5"/>
+                                                <constraint firstItem="OTX-XS-GH1" firstAttribute="top" secondItem="Vo0-UW-59x" secondAttribute="top" constant="5" id="LMd-Oj-6sK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellView" destination="OTX-XS-GH1" id="HRd-9s-9Ai"/>
+                                            <outlet property="movieImage" destination="wzW-7c-4s9" id="w0v-32-db6"/>
+                                            <outlet property="movieLabel" destination="rec-KO-oip" id="ERt-ZL-jum"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1i8-ZB-m5M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6aI-f9-qpt"/>
+                            <constraint firstItem="1i8-ZB-m5M" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hql-v2-yhJ"/>
+                            <constraint firstItem="1i8-ZB-m5M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qwk-kR-8XL"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="1i8-ZB-m5M" secondAttribute="bottom" id="TbI-a6-ZTu"/>
+                        </constraints>
+                    </view>
                     <navigationItem key="navigationItem" id="iTI-oh-w9O">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="UbS-qN-A1x">
                             <connections>
@@ -21,6 +89,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="1i8-ZB-m5M" id="Def-Xn-QTR"/>
                         <segue destination="ptT-6z-Xuc" kind="show" identifier="showDetails" id="7rx-uf-Hme"/>
                     </connections>
                 </viewController>
@@ -33,29 +102,29 @@
             <objects>
                 <viewController id="ptT-6z-Xuc" customClass="MovieViewController" customModule="Bourne_Digital_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yjt-Lr-SVd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rE7-tu-BqX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3R-sz-uFJ">
-                                <rect key="frame" x="0.0" y="534.33333333333337" width="375" height="243.66666666666663"/>
+                                <rect key="frame" x="0.0" y="241.66666666666666" width="812" height="112.33333333333334"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1T-Bn-cqx">
-                                        <rect key="frame" x="25" y="91" width="325" height="21.666666666666671"/>
+                                        <rect key="frame" x="25" y="91.000000000000028" width="762" height="21.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgg-B3-Y28">
-                                        <rect key="frame" x="20" y="10" width="335" height="39.666666666666664"/>
+                                        <rect key="frame" x="20" y="10" width="772" height="39.666666666666664"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlz-I8-tcp">
-                                        <rect key="frame" x="25" y="59.666666666666636" width="325" height="21.333333333333336"/>
+                                        <rect key="frame" x="25" y="59.666666666666664" width="762" height="21.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -107,7 +176,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sd4-0y-1sa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R4a-eG-qaO">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -121,6 +190,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bourne digital" width="400" height="400"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
