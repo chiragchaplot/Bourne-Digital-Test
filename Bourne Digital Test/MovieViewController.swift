@@ -22,8 +22,28 @@ class MovieViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         movieName.text = movie?.title
-        movieRating.text = String(describing: movie!.rating ?? 0.0 )
-        movieReleaseDate.text = movie?.releaseDate ?? "Release Date Not Found"
+        
+        //Movie Rating Error Handling
+        if (movie!.rating == nil)
+        {
+            movieRating.text = "No iMDB Rating Available"
+            movieRating.textColor = UIColor.red
+        }
+        else
+        {
+            movieRating.text = String(describing: movie!.rating!)
+        }
+        
+        //Movie Release Date Error Handling
+        if (movie!.releaseDate == nil)
+        {
+            movieReleaseDate.text = "No Release Date Found"
+            movieReleaseDate.textColor = UIColor.red
+        }
+        else
+        {
+        movieReleaseDate.text = movie?.releaseDate!
+        }
         
         
         do
